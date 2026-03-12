@@ -1,0 +1,228 @@
+:root {
+    --accent-hue: 200;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #050505;
+    font-family: 'Space Grotesk', sans-serif;/* font-family: 'Segoe UI', sans-serif; */
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.search-interface {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* Основной стиль заголовка */
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff; 
+    font-weight: 0; 
+    font-size: 85px;
+    margin: 0; 
+    letter-spacing: 0px;
+    transition: transform 0.3s ease; /* Для плавного возврата */
+    pointer-events: none;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-box-wrapper {
+    position: relative; 
+    pointer-events: auto;
+    width: 100%; 
+    max-width: 700px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: -10px;
+}
+
+#custom-placeholder {
+    font-family: 'Space Grotesk', sans-serif !important;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 24px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 5;
+}
+
+.caret {
+    width: 2px;
+    height: 28px;
+    background: #fff;
+    margin-left: 8px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.footer-tag {
+    color: rgba(255, 255, 255, 0.2);
+    margin-top: 12px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* Google CSE Cleaning */
+.gsc-control-cse,
+.gsc-control-cse * {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.gsc-search-button,
+.gsst_a,
+.gsc-clear-button,
+.gsc-branding {
+    display: none !important;
+}
+
+.gsc-input-box {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Дополнительно убираем отступы у внутреннего контейнера Google
+.gsc-input-box td {
+    padding: 0 !important;
+} */
+
+input.gsc-input {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 0;
+    background: transparent !important;
+    color: white !important;
+    font-size: 26px !important;
+    text-align: center !important;
+    outline: none !important;
+    width: 100% !important;
+
+    /* ИСПРАВЛЕНИЕ ЦЕНТРИРОВАНИЯ */
+    padding: 15px 0 !important;
+    /* Убираем боковые отступы, оставляем только верх/низ */
+    margin: 0 !important;
+    /* Убираем внешние отступы */
+    text-indent: 0 !important;
+    /* Убираем возможный отступ первой строки */
+
+    z-index: 10;
+}
+
+/* Overlay Styling */
+.gsc-results-wrapper-overlay {
+    background: rgba(5, 5, 10, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px;
+}
+
+.gs-title,
+.gs-title b {
+    color: hsl(var(--accent-hue), 80%, 70%) !important;
+    text-decoration: none !important;
+}
+
+.gs-snippet {
+    color: #bbb !important;
+}
+
+.gsc-url-top {
+    color: hsl(var(--accent-hue), 100%, 50%) !important;
+}
+
+.gsc-results-close-btn {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Полное скрытие блока автозаполнения */
+.gstl_50.gssb_c,
+.gssb_a {
+    display: none !important;
+}
+
+/*_____________________________________________*/
+/* тут функции эксперементального подмигивания */
+/*_____________________________________________*/
+
+/* Класс для анимации подмигивания */
+.logo-wink {
+    animation: logo-pulse 0.4s ease-out;
+}
+
+@keyframes logo-pulse {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.08); } /* Легкое увеличение */
+    100% { transform: scale(1); }
+}
+
+/*_____________________________________________*/
+/* клавиша настроек поиска Google              */
+/*_____________________________________________*/
+
+.search-box-wrapper {
+    position: relative; 
+    pointer-events: auto;
+    width: 100%; 
+    max-width: 700px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: -10px;
+}
+
+.settings-btn {
+    position: absolute;
+    right: 50px; /* Подбираем отступ, чтобы было симметрично лупе */
+    z-index: 20;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.settings-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.settings-btn svg {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.settings-btn:hover svg {
+    transform: rotate(90deg);
+}
