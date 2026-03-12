@@ -209,14 +209,4 @@ app.add_middleware(
 
 ## 📝 Лицензия
 
-MIT License — используйте свободно! 😊
-
-## 👤 Автор
-
-Создано для демонстрации ML + FastAPI + Google Custom Search Integration
-
----
-
-**Готов к загрузке на GitHub!** 🚀
-
-Если нашли ошибки — создавайте Issues!
+MIT License 
