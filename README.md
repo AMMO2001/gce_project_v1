@@ -2,6 +2,8 @@
 
 **Умная поисковая система на базе Google Custom Search с ML-классификацией запросов**
 
+<img width="2042" height="1191" alt="Pasted image" src="https://github.com/user-attachments/assets/3925a518-51d0-496c-9824-aeef4e2fe537" />
+
 ## 📋 Описание
 
 Pynex — это современная оболочка над Google Custom Search Engine с интеллектуальной системой логирования и классификации поисковых запросов. Проект использует machine learning для определения языка запроса и его категории, сохраняя все данные в формате JSONL для последующего анализа.
