@@ -3,6 +3,9 @@
 **Умная поисковая система на базе Google Custom Search с ML-классификацией запросов**
 
 <img width="2042" height="1191" alt="Pasted image" src="https://github.com/user-attachments/assets/3925a518-51d0-496c-9824-aeef4e2fe537" />
+<img width="2042" height="1191" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/157dcc16-844a-4c2b-8041-13e21e94a540" />
+<img width="2042" height="1191" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/44f8fd33-2f0c-48b6-acec-e04258ff7c6b" />
+
 
 ## 📋 Описание
 
